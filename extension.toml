@@ -1,0 +1,27 @@
+id = "nuclearlang"
+name = "NuclearLang"
+version = "0.37.2"
+schema_version = 1
+authors = ["Julian Molina"]
+description = "NuclearLang (.nuc): language server, semantic highlighting, code metrics, Dragonfly tasks and the Chernobyl theme"
+repository = "https://github.com/nuclearlang/nuclear-zed"
+languages = ["languages/nuclear"]
+themes = ["themes/chernobyl.json"]
+icon_themes = ["icon_themes/chernobyl-icons.json"]
+
+[lib]
+kind = "Rust"
+version = "0.7.0"
+
+# Zed loads grammars from a git commit of this repository (grammar/): rev is a published commit that has it
+[grammars.nuclear]
+repository = "https://github.com/nuclearlang/nuclear-zed"
+path = "grammar"
+rev = "9762a90c0cd864765e8bb5947ef6a4c7bcd44c90"
+
+[language_servers.nuclear-lsp]
+name = "Nuclear LSP"
+languages = ["Nuclear"]
+
+[language_servers.nuclear-lsp.language_ids]
+Nuclear = "nuclear"

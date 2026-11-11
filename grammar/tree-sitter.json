@@ -1,0 +1,4 @@
+{
+  "grammars": [{ "name": "nuclear", "scope": "source.nuclear", "path": ".", "file-types": ["nuc"] }],
+  "metadata": { "version": "0.1.0", "license": "MIT", "description": "NuclearLang grammar for Zed" }
+}

@@ -1,0 +1,140 @@
+[
+  {
+    "label": "Nuclear: generated code of $ZED_FILENAME",
+    "command": "nuclear",
+    "args": [
+      "build",
+      "$ZED_FILE",
+      "--dialect",
+      "flutter"
+    ],
+    "use_new_terminal": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Nuclear: check $ZED_FILENAME",
+    "command": "nuclear",
+    "args": [
+      "check",
+      "$ZED_FILE",
+      "--dialect",
+      "flutter"
+    ],
+    "reveal": "always"
+  },
+  {
+    "label": "Dragonfly: run (r = hot reload, R = hot restart)",
+    "command": "dragonfly",
+    "args": [
+      "run"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "tags": [
+      "dragonfly-main"
+    ]
+  },
+  {
+    "label": "Dragonfly: device (own window, like an emulator)",
+    "command": "dragonfly",
+    "args": [
+      "device"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "tags": [
+      "dragonfly-main"
+    ]
+  },
+  {
+    "label": "Dragonfly: terminal device (inside this terminal)",
+    "command": "dragonfly",
+    "args": [
+      "terminal-device"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "use_new_terminal": true,
+    "reveal": "always",
+    "tags": [
+      "dragonfly-main"
+    ]
+  },
+  {
+    "label": "Dragonfly: test \"$ZED_CUSTOM_test_name\"",
+    "command": "dragonfly",
+    "args": [
+      "test",
+      "--",
+      "--plain-name",
+      "$ZED_CUSTOM_test_name"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "reveal": "always",
+    "tags": [
+      "dragonfly-test"
+    ]
+  },
+  {
+    "label": "Dragonfly: build",
+    "command": "dragonfly",
+    "args": [
+      "build"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "reveal": "always"
+  },
+  {
+    "label": "Dragonfly: watch (build on every save)",
+    "command": "dragonfly",
+    "args": [
+      "watch"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "never"
+  },
+  {
+    "label": "Dragonfly: test",
+    "command": "dragonfly",
+    "args": [
+      "test"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "reveal": "always",
+    "tags": [
+      "dragonfly-test"
+    ]
+  },
+  {
+    "label": "Dragonfly: analyze",
+    "command": "dragonfly",
+    "args": [
+      "analyze"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "reveal": "always"
+  },
+  {
+    "label": "Dragonfly: repair",
+    "command": "dragonfly",
+    "args": [
+      "repair"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "reveal": "always"
+  },
+  {
+    "label": "Dragonfly: explain the error in the clipboard",
+    "command": "sh",
+    "args": [
+      "-c",
+      "(wl-paste 2>/dev/null || xclip -o -selection clipboard 2>/dev/null) | dragonfly explain"
+    ],
+    "cwd": "$ZED_DIRNAME",
+    "reveal": "always"
+  }
+]
