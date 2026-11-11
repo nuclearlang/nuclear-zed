@@ -17,7 +17,7 @@ version = "0.7.0"
 [grammars.nuclear]
 repository = "https://github.com/nuclearlang/nuclear-zed"
 path = "grammar"
-rev = "9762a90c0cd864765e8bb5947ef6a4c7bcd44c90"
+rev = "98332d07389b76530c3f6c216fa8c26ac4b0e302"
 
 [language_servers.nuclear-lsp]
 name = "Nuclear LSP"
