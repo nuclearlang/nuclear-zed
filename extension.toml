@@ -1,6 +1,6 @@
 id = "nuclearlang"
 name = "NuclearLang"
-version = "0.37.2"
+version = "0.44.0"
 schema_version = 1
 authors = ["Julian Molina"]
 description = "NuclearLang (.nuc): language server, semantic highlighting, code metrics, Dragonfly tasks and the Chernobyl theme"
